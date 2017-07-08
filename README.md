@@ -11,6 +11,7 @@ Example Usage:
 <custom-element-demo>
   <template>
     <link rel="import" href="iron-toggle-icon.html">
+    <link rel="import" href="iron-toggle-icons.html">
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
