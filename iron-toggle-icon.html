@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="../iron-icons/iron-icons.html">
+<link rel="import" href="iron-toggle-icons.html">
 <dom-module id="iron-toggle-icon">
   <template>
     <style>
@@ -9,12 +10,12 @@
     </style>
     <div hidden$="[[!active]]">
       <slot name="active">
-        <iron-icon icon="unfold-less"></iron-icon>
+        <iron-icon icon="iron-toggle-icons:unfold-less"></iron-icon>
       </slot>
     </div>
     <div hidden$="[[active]]">
       <slot name="inactive">
-        <iron-icon icon="unfold-more"></iron-icon>
+        <iron-icon icon="iron-toggle-icons:unfold-more"></iron-icon>
       </slot>
     </div>
   </template>
@@ -44,10 +45,10 @@
     },
 
     listeners: {
-      'tap': 'onTap'
+      'tap': 'toggle'
     },
 
-    onTap: function(e, d) {
+    toggle: function() {
       this.active = !this.active;
     }
 
