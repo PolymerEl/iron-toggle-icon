@@ -1,3 +1,5 @@
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://beta.webcomponents.org/element/polymerEl/iron-toggle-icon)
+
 # \<paper-state-button\>
 
 a simple element to toggle between active and inactive state by clicking on icons
