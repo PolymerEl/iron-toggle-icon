@@ -1,0 +1,20 @@
+{
+  "name": "paper-state-button",
+  "description": "a simple element to toggle between active and inactive state by clicking on icons",
+  "main": "paper-state-button.html",
+  "license": "MIT",
+  "authors": [
+    "christophe.geiser <christophe.geiser@e-smile.org>"
+  ],
+  "repository": "https://github.com/polymerEl/paper-state-button",
+  "dependencies": {
+   "polymer": "Polymer/polymer#^1.9.0",
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+  }
+}

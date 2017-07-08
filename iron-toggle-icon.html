@@ -1,0 +1,56 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+<dom-module id="iron-toggle-icon">
+  <template>
+    <style>
+    :host {
+      display: block;
+    }
+    </style>
+    <div hidden$="[[!active]]">
+      <slot name="active">
+        <iron-icon icon="unfold-less"></iron-icon>
+      </slot>
+    </div>
+    <div hidden$="[[active]]">
+      <slot name="inactive">
+        <iron-icon icon="unfold-more"></iron-icon>
+      </slot>
+    </div>
+  </template>
+  <script>
+  /**
+   * `iron-toggle-icon`
+   * a simple element to toggle between active and inactive state by clicking on icons
+   *
+   * @customElement
+   * @polymer
+   * @demo demo/index.html
+   */
+
+  Polymer({
+    is: 'iron-toggle-icon',
+
+    properties: {
+      /* 
+       * `active` the actual state of this component
+       */
+      active: {
+        type: Boolean,
+        notify: true,
+        value: true,
+        reflectToAttribute: true
+      }
+    },
+
+    listeners: {
+      'tap': 'onTap'
+    },
+
+    onTap: function(e, d) {
+      this.active = !this.active;
+    }
+
+  });
+  </script>
+</dom-module>
