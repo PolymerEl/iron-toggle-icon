@@ -1,20 +1,32 @@
-<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="iron-toggle-icons.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <dom-module id="iron-toggle-icon">
   <template>
     <style>
     :host {
-      display: block;
+      @apply(--layout-inline);
+      @apply(--layout-center-center);
+      position: relative;
+      vertical-align: middle;
+      fill: var(--iron-icon-fill-color, currentcolor);
+      stroke: var(--iron-icon-stroke-color, none);
+      width: var(--iron-icon-width, 24px);
+      height: var(--iron-icon-height, 24px);
+    }
+
+    div {
+      font-size: initial;
     }
     </style>
     <div hidden$="[[!active]]">
       <slot name="active">
-        <iron-icon icon="iron-toggle-icons:unfold-less"></iron-icon>
+        <iron-icon icon="iron-toggle-icons:unfold-more"></iron-icon>
       </slot>
     </div>
     <div hidden$="[[active]]">
       <slot name="inactive">
-        <iron-icon icon="iron-toggle-icons:unfold-more"></iron-icon>
+        <iron-icon icon="iron-toggle-icons:unfold-less"></iron-icon>
       </slot>
     </div>
   </template>
@@ -29,7 +41,7 @@
    */
 
   Polymer({
-    
+
     is: 'iron-toggle-icon',
 
     properties: {
