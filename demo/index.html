@@ -1,39 +1,41 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>iron-toggle-icon demo</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <title>iron-toggle-icon demo</title>
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../iron-toggle-icon.html">
+  <link rel="import" href="../../iron-icons/iron-icons.html">
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </custom-style>
+</head>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+<body>
+  <div class="vertical-section-container centered">
+    <h3>Basic iron-toggle-icon demo</h3>
+    <demo-snippet>
+      <template>
+        <dom-bind id="app">
+          <template>
+            <p>Default behaviors (active: [[active]]) </p>
+            <iron-toggle-icon active="{{active}}"></iron-toggle-icon>
+            <p>With custom icons (active: [[active1]]) </p>
+            </p>
+            <iron-toggle-icon active="{{active1}}">
+              <iron-icon slot="active" icon="info"></iron-icon>
+              <iron-icon slot="inactive" icon="help"></iron-icon>
+            </iron-toggle-icon>
+          </template>
+        </dom-bind>
+      </template>
+    </demo-snippet>
+  </div>
+</body>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../iron-toggle-icon.html">
-    <link rel="import" href="../../iron-icons/iron-icons.html">
-
-    <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles">
-      </style>
-    </custom-style>
-  </head>
-  <body>
-    <div class="vertical-section-container centered">
-      <h3>Basic iron-toggle-icon demo</h3>
-      <demo-snippet>
-        <template>
-         <template is="dom-bind" id="app">
-          <p>Default behaviors (active: [[active]]) </p>
-          <iron-toggle-icon active="{{active}}"></iron-toggle-icon>
-          <p>With custom icons  (active: [[active1]]) </p></p>
-           <iron-toggle-icon active="{{active1}}">
-             <iron-icon slot="active" icon="info"></iron-icon>
-             <iron-icon slot="inactive" icon="help"></iron-icon>
-           </iron-toggle-icon>
-           </template>
-        </template>
-      </demo-snippet>
-    </div>
-  </body>
 </html>
