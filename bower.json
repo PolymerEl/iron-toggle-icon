@@ -3,7 +3,7 @@
   "description": "a simple element to toggle between active and inactive state by clicking on icons",
   "main": "paper-state-button.html",
   "license": "MIT",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "authors": [
     "christophe.geiser <christophe.geiser@e-smile.org>"
   ],
